@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,6 +30,28 @@
     li {
       margin-bottom: 0.5rem;
     }
+    form {
+      background: white;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 500px;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      background-color: #004080;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      cursor: pointer;
+      border-radius: 4px;
+    }
     footer {
       background-color: #004080;
       color: white;
@@ -46,9 +67,7 @@
   <header>
     <h1>Wyzer Fiber</h1>
     <p>Smart Tech & Networking Solutions in Paris, TN</p>
-  </header>
-
-  <section>
+  </header>  <section>
     <h2>Our Services</h2>
     <ul>
       <li>Home & Office Wi-Fi Setup</li>
@@ -58,16 +77,18 @@
       <li>TV Mounting & A/V Setup</li>
       <li>Fiber Splicing & Custom Tech Solutions</li>
     </ul>
-  </section>
-
-  <section>
+  </section>  <section>
     <h2>Contact Us</h2>
     <p>Ready to upgrade your tech? Get in touch today:</p>
-    <p>Email: <a href="mailto:levi@wyzerfiber.com">levi@wyzerfiber.com</a></p>
+    <form action="https://formspree.io/f/mdkejqpj" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p>Email: <a href="mailto:info@wyzerfiber.com">info@wyzerfiber.com</a></p>
     <p>Phone: (931) 555-1234</p>
-  </section>
-
-  <footer>
+  </section>  <footer>
     <p>&copy; 2025 Wyzer Fiber. All rights reserved.</p>
   </footer>
 </body>
