@@ -83,14 +83,36 @@
         font-size: 1rem;
       }
     }
+    .ghost-button {
+  position: absolute;
+  bottom: 12%;         /* adjust if needed to align over your image */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 180px;
+  height: 50px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
   </style>
 </head>
 <body>
   <div class="background"></div>
   <div class="overlay">
-    <h1>Wyzer Fiber</h1>
-    <p>Our full website is coming soon.</p>
-    <button onclick="window.location.href='home.html'">Continue</button>
-  </div>
+    <h1 class="sr-only">Wyzer Fiber</h1>
+<p class="sr-only">Coming Soon</p>
+<button class="ghost-button" onclick="window.location.href='home.html'"></button>  </div>
 </body>
 </html>
