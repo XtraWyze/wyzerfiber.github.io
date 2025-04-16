@@ -1,39 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Wyzer Fiber – Coming Soon</title>
   <style>
-    body {
-      background: #004080;
-      color: white;
+    * {
+      box-sizing: border-box;
+    }
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
       font-family: Arial, sans-serif;
+      color: white;
+      background: #000;
+      overflow: hidden;
+    }
+
+    .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: url('background.jpg') no-repeat center center/cover;
+      opacity: 0;
+      animation: fadeIn 2s ease-in-out forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.6);
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      margin: 0;
       text-align: center;
+      padding: 2rem;
     }
+
     h1 {
       font-size: 2.5rem;
+      margin-bottom: 1rem;
     }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
     button {
-      margin-top: 20px;
-      padding: 10px 20px;
+      padding: 0.75rem 1.5rem;
       font-size: 1rem;
-      background: white;
-      color: #004080;
       border: none;
       border-radius: 6px;
+      background-color: white;
+      color: #004080;
       cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #cce0ff;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Wyzer Fiber</h1>
-  <p>Our full site is coming soon.</p>
-  <button onclick="window.location.href='home.html'">Continue</button>
+  <div class="background"></div>
+  <div class="overlay">
+    <h1>Wyzer Fiber</h1>
+    <p>Our full website is coming soon.</p>
+    <button onclick="window.location.href='home.html'">Continue</button>
+  </div>
 </body>
 </html>
