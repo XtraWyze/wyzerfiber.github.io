@@ -22,7 +22,16 @@
   justify-content: center;
   align-items: center;
   position: relative;
-    }
+}
+
+.mobile-splash::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  height: 100%; width: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.2));
+  z-index: 1;
+}
 
 .overlay-text {
   position: absolute;
@@ -32,23 +41,31 @@
   width: 100%;
   text-align: center;
   color: white;
-  animation: fadeIn 1.5s ease-in-out forwards;
+  z-index: 2;
 }
 
 .overlay-text h1 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   margin-bottom: 0.5rem;
+  letter-spacing: 1.2px;
+  font-weight: 600;
+  opacity: 0;
+  animation: fadeIn 1s ease-out 0.2s forwards;
 }
 
 .overlay-text p.tagline {
   font-size: 1rem;
   margin-bottom: 2.5rem;
+  opacity: 0;
+  animation: fadeIn 1s ease-out 0.5s forwards;
 }
 
 .overlay-text p.coming-soon {
   font-size: 1.3rem;
   font-weight: bold;
   margin-bottom: 3.5rem;
+  opacity: 0;
+  animation: fadeIn 1s ease-out 0.8s forwards;
 }
 
 .overlay-text button {
@@ -60,6 +77,14 @@
   border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.3s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  opacity: 0;
+  animation: fadeIn 1s ease-out 1.2s forwards;
+}
+
+.overlay-text button:hover {
+  background-color: #cce0ff;
+  box-shadow: 0 4px 18px rgba(0,64,128,0.6);
 }
 
 @keyframes fadeIn {
@@ -77,12 +102,12 @@
 </head>
 <body>
   <div class="mobile-splash">
-  <div class="overlay-text">
-    <h1>Wyzer Fiber</h1>
-    <p class="tagline">Smart Installs. Reliable Tech. Serving West TN.</p>
-    <p class="coming-soon">Coming Soon</p>
-    <button onclick="window.location.href='home.html'">Continue</button>
+    <div class="overlay-text">
+      <h1>Wyzer Fiber</h1>
+      <p class="tagline">Smart Installs. Reliable Tech. Serving West TN.</p>
+      <p class="coming-soon">Coming Soon</p>
+      <button onclick="window.location.href='home.html'">Continue</button>
+    </div>
   </div>
-</div>
 </body>
 </html>
