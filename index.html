@@ -35,46 +35,11 @@
       }
     }
 
-    .overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      background: rgba(0, 0, 0, 0.6);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 2rem;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-
-    p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-    }
-
-    button {
-      padding: 0.75rem 1.5rem;
-      font-size: 1rem;
-      border: none;
-      border-radius: 6px;
-      background-color: white;
-      color: #004080;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-
-    button:hover {
-      background-color: #cce0ff;
-    }
-
+    <div class="overlay">
+  <h1 class="sr-only">Wyzer Fiber</h1> <!-- for screen readers -->
+  <p class="sr-only">Coming Soon</p>
+  <button class="ghost-button" onclick="window.location.href='home.html'"></button>
+</div>
     @media (max-width: 600px) {
       h1 {
         font-size: 2rem;
